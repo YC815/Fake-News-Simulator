@@ -1,37 +1,31 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+假訊息製作所 | 網頁模擬器遊戲
+===
 
-## Getting Started
+## 作品創作動機 ##
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 程式框架 ##
+以Next.js網頁，電腦需配置[Node.js 12.22.0](https://nodejs.org/en)或更高版本以運行程式。
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## 啟動方式 ##
+1. 開啟終端機
+2. 將目錄指向本專案根目錄
+3. 運行 `npm install` 以自動將安裝專案所需要之模組
+4. 運行 `npm run dev` 並前往網站 [http://localhost:3000](http://localhost:3000)
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+ > 亦可前往網站 [https://fns.vercel.app/](https://fns.vercel.app/) 直接進入遊戲畫面
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 注意事項 ##
+1. 本次專案強烈建議以電腦執行
+2. 若在本地端運行務必輸入 `npm install` 後再運行。
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-# Fake-News-Simulator
+## 下載 ##
+可點擊[「下載」](https://github.com/YC815/Fake-News-Simulator/archive/refs/heads/main.zip)或前往[專案Github倉庫](https://github.com/YC815/Fake-News-Simulator)下載
