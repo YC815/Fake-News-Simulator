@@ -1,6 +1,6 @@
 假訊息製作所 | 網頁模擬器遊戲
 ===
-### <u>F</u>ake <u>N</u>ews <u>S</u>imulator
+<u>F</u>ake <u>N</u>ews <u>S</u>imulator
 
 ## 作品創作動機 ##
 
