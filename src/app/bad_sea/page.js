@@ -1,26 +1,12 @@
 import { ModeToggle } from "@/components/modetoggle";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import Link from "next/link";
-import { Copy } from "lucide-react";
-
 import { Button } from "@/components/ui/button";
-import {
-  Dialog,
-  DialogClose,
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="relative p-8">
+    <div className="relative p-8 h-screen max-w-xls">
       <div>
         <ModeToggle className="absolute top-0 left-0" />
         <a className="ml-4 text-xl font-custom">
@@ -31,7 +17,7 @@ export default function Home() {
       <div className="border-t border-gray-300 my-3"></div>
 
       <div className="mt-5">
-        <Tabs defaultValue="home" className="w-[400px]">
+        <Tabs defaultValue="browser" className="w-[400px]">
           <TabsList>
             <TabsTrigger value="home">主頁</TabsTrigger>
             <TabsTrigger value="browser">FN browser</TabsTrigger>
@@ -45,20 +31,7 @@ export default function Home() {
             <div className="border-t border-gray-300 my-3"></div>
 
             <div className="bg-gray-200 overflow-hidden rounded-3xl">
-              <Dialog>
-                <DialogTrigger asChild>
-                  <img className="" src="/bad_sea/垃圾海邊.jpeg" />
-                </DialogTrigger>
-                <DialogContent className="sm:max-w-md">
-                  <DialogHeader>
-                    <DialogTitle>成功下載</DialogTitle>
-                    <DialogDescription>請開始假訊息創作</DialogDescription>
-                    <Button asChild>
-                      <Link href="/bad_sea">開始</Link>
-                    </Button>
-                  </DialogHeader>
-                </DialogContent>
-              </Dialog>
+              <img className="" src="/bad_sea/垃圾海邊.jpeg" />
             </div>
           </TabsContent>
 
@@ -98,6 +71,15 @@ export default function Home() {
           </TabsContent>
         </Tabs>
       </div>
+
+      <Button
+        variant="outline"
+        className="text-center py-6 border w-96 h-auto border-primary rounded-md absolute bottom-52 left-36"
+      >
+        Hello
+      </Button>
+
+      <img className="absolute bottom-0 left-0 h-auto w-96" src="/boss.png" />
     </div>
   );
 }
