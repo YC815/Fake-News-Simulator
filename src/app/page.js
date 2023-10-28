@@ -1,9 +1,10 @@
+"use client";
 import { ModeToggle } from "@/components/modetoggle";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import Link from "next/link";
 import { Copy } from "lucide-react";
-
+import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -15,10 +16,22 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+import { Progress } from "@/components/ui/progress";
+import { useEffect, useState } from "react";
 
 export default function Home() {
+  const [currentschedule, setCurrentSchedule] = useState(0);
+  const handleButtonClick = () => {
+    setCurrentSchedule(70);
+    window.location.href = "/bad_sea";
+  };
   return (
     <div className="relative p-8">
       <div>
@@ -39,7 +52,26 @@ export default function Home() {
             <TabsTrigger value="share">假訊息推廣</TabsTrigger>
           </TabsList>
 
-          <TabsContent value="home"></TabsContent>
+          <TabsContent value="home">
+            <Accordion type="single" collapsible>
+              <AccordionItem value="item-1">
+                <AccordionTrigger>
+                  點擊內容後頁面沒有變動怎麼辦？
+                </AccordionTrigger>
+                <AccordionContent>
+                  可能是載入較慢導致的，稍等幾秒即可解決。
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
+            <Accordion type="single" collapsible>
+              <AccordionItem value="item-1">
+                <AccordionTrigger>遇到人物對話怎麼辦？</AccordionTrigger>
+                <AccordionContent>
+                  點擊對話框即可繼續對話，請依照人物的指示進行遊戲操作。
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
+          </TabsContent>
           <TabsContent value="browser">
             <p>點擊任何圖片素材、文字素材即可開始製作假訊息</p>
             <div className="border-t border-gray-300 my-3"></div>
@@ -47,15 +79,17 @@ export default function Home() {
             <div className="bg-gray-200 overflow-hidden rounded-3xl">
               <Dialog>
                 <DialogTrigger asChild>
-                  <img className="" src="/bad_sea/垃圾海邊.jpeg" />
+                  <img
+                    className="cursor-pointer hover:cursor-pointer"
+                    src="/bad_sea/垃圾海邊.jpeg"
+                  />
                 </DialogTrigger>
                 <DialogContent className="sm:max-w-md">
                   <DialogHeader>
-                    <DialogTitle>成功下載</DialogTitle>
-                    <DialogDescription>請開始假訊息創作</DialogDescription>
-                    <Button asChild>
-                      <Link href="/bad_sea">開始</Link>
-                    </Button>
+                    <DialogTitle>點擊按鈕開始下載</DialogTitle>
+                    <DialogDescription>下載後自動跳轉至頁面</DialogDescription>
+                    <Button onClick={handleButtonClick}>開始</Button>
+                    <Progress value={currentschedule} />
                   </DialogHeader>
                 </DialogContent>
               </Dialog>
