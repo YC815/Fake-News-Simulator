@@ -55,6 +55,18 @@ export default function Home() {
           <TabsContent value="home">
             <Accordion type="single" collapsible>
               <AccordionItem value="item-1">
+                <AccordionTrigger>想知道作品簡介？</AccordionTrigger>
+                <AccordionContent>
+                  <Button asChild>
+                    <Link href="https://github.com/YC815/Fake-News-Simulator">
+                      點擊
+                    </Link>
+                  </Button>
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
+            <Accordion type="single" collapsible>
+              <AccordionItem value="item-1">
                 <AccordionTrigger>
                   點擊內容後頁面沒有變動怎麼辦？
                 </AccordionTrigger>

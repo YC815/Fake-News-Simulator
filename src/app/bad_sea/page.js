@@ -26,7 +26,12 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { Label } from "@/components/ui/label";
-
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 export default function Home() {
   const [currentIndex, setCurrentIndex] = useState(1); // 初始索引
   const [buttonText, setButtonText] = useState(""); // 初始按鈕文字
@@ -39,7 +44,7 @@ export default function Home() {
   }, [currentIndex]);
 
   const handleButtonClick = () => {
-    setCurrentIndex((prevIndex) => (prevIndex === 15 ? 1 : prevIndex + 1));
+    setCurrentIndex((prevIndex) => (prevIndex === 14 ? 1 : prevIndex + 1));
   };
 
   const [inputValue, setInputValue] = useState("");
@@ -63,6 +68,7 @@ export default function Home() {
       "灣海灘開始受污染，沙灘黑化海面污油化，美國專家評鑑初步推測是受日本核污水影響，英國菁英大學Adolf Garcia教授發言：「恐無法挽回」，科研院發出聲明：「建議不要食用本土海鮮」。"
     );
   };
+
   return (
     <div className="relative p-8 h-screen max-w-xls">
       {/* <pre>{JSON.stringify(data["1"], null, 2)}</pre> */}
@@ -85,7 +91,38 @@ export default function Home() {
             <TabsTrigger value="share">假訊息推廣</TabsTrigger>
           </TabsList>
 
-          <TabsContent value="home"></TabsContent>
+          <TabsContent value="home">
+            <Accordion type="single" collapsible>
+              <AccordionItem value="item-1">
+                <AccordionTrigger>想知道作品簡介？</AccordionTrigger>
+                <AccordionContent>
+                  <Button asChild>
+                    <Link href="https://github.com/YC815/Fake-News-Simulator">
+                      點擊
+                    </Link>
+                  </Button>
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
+            <Accordion type="single" collapsible>
+              <AccordionItem value="item-1">
+                <AccordionTrigger>
+                  點擊內容後頁面沒有變動怎麼辦？
+                </AccordionTrigger>
+                <AccordionContent>
+                  可能是載入較慢導致的，稍等幾秒即可解決。
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
+            <Accordion type="single" collapsible>
+              <AccordionItem value="item-1">
+                <AccordionTrigger>遇到人物對話怎麼辦？</AccordionTrigger>
+                <AccordionContent>
+                  點擊對話框即可繼續對話，請依照人物的指示進行遊戲操作。
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
+          </TabsContent>
           <TabsContent value="browser">
             <p>點擊任何圖片素材、文字素材即可開始製作假訊息</p>
             <div className="border-t border-gray-300 my-3"></div>
