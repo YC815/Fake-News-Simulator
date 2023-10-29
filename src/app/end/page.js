@@ -1,4 +1,5 @@
 "use client";
+// 載入資料、函式庫
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import data from "@/../public/end/texts";
@@ -9,11 +10,11 @@ export default function Home() {
 
   const [currentIndex, setCurrentIndex] = useState(1); // 初始索引
   const [buttonText, setButtonText] = useState(""); // 初始按鈕文字
-  useEffect(() => {
-    console.log("data:", data);
-    setButtonText(data[currentIndex]);
+  useEffect(() => { 
+    console.log("data:", data);//輸出對話資料
+    setButtonText(data[currentIndex]); //設定按鈕文字成資料JSON[index]
     //setData(data);
-  }, [currentIndex]);
+  }, [currentIndex]); 
 
   const handleButtonClick = () => {
     if (currentIndex === 9) {
