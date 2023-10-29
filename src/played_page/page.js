@@ -214,6 +214,9 @@ export default function Home() {
           </TabsContent>
         </Tabs>
       </div>
+      <Button className="absolute bottom-0 right-0 w-auto h-32" asChild>
+        <Link href="/end">我不玩了</Link>
+      </Button>
     </div>
   );
 }

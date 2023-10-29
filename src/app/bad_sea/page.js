@@ -60,7 +60,7 @@ export default function Home() {
     } else if (currentIndex === 11 && setp11 === false) {
       console.log("setp11");
     } else if (currentIndex === 13) {
-      router.push("/");
+      router.push("/played_page");
     } else {
       setCurrentIndex((prevIndex) => (prevIndex === 14 ? 1 : prevIndex + 1));
     }
