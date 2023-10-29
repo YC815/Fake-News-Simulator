@@ -59,7 +59,7 @@ export default function Home() {
       console.log("step7");
     } else if (currentIndex === 11 && setp11 === false) {
       console.log("setp11");
-    } else if (currentIndex === 14) {
+    } else if (currentIndex === 13) {
       router.push("/");
     } else {
       setCurrentIndex((prevIndex) => (prevIndex === 14 ? 1 : prevIndex + 1));
@@ -287,7 +287,7 @@ export default function Home() {
                         <Label htmlFor="article" className="text-right">
                           文案
                         </Label>
-                        <extarea
+                        <textarea
                           id="article"
                           value={article}
                           className="col-span-3 h-32"

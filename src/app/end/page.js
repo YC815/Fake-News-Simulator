@@ -16,10 +16,10 @@ export default function Home() {
   }, [currentIndex]);
 
   const handleButtonClick = () => {
-    if (currentIndex === 6) {
+    if (currentIndex === 9) {
       router.push("about:blank");
     } else {
-      setCurrentIndex((prevIndex) => (prevIndex === 6 ? 1 : prevIndex + 1));
+      setCurrentIndex((prevIndex) => (prevIndex === 9 ? 1 : prevIndex + 1));
     }
   };
   return (
