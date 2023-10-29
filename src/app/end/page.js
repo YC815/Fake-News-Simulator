@@ -10,21 +10,23 @@ export default function Home() {
 
   const [currentIndex, setCurrentIndex] = useState(1); // 初始索引
   const [buttonText, setButtonText] = useState(""); // 初始按鈕文字
-  useEffect(() => { 
-    console.log("data:", data);//輸出對話資料
-    setButtonText(data[currentIndex]); //設定按鈕文字成資料JSON[index]
+  useEffect(() => {
+    console.log("data:", data);
+    setButtonText(data[currentIndex]);
     //setData(data);
-  }, [currentIndex]); 
+  }, [currentIndex]);
 
   const handleButtonClick = () => {
     if (currentIndex === 9) {
+      //如果對話到9，跳轉到空白頁面
       router.push("about:blank");
     } else {
-      setCurrentIndex((prevIndex) => (prevIndex === 9 ? 1 : prevIndex + 1));
+      setCurrentIndex((prevIndex) => (prevIndex === 9 ? 1 : prevIndex + 1)); //如果對話沒有結束，每按一次按鈕index+1
     }
   };
   return (
     <div className="relative p-8 h-screen max-w-xls">
+      {/* 對話按鈕 */}
       <Button
         variant="outline"
         className="text-center py-6 border w-[1000px] h-[200px] border-primary rounded-md absolute bottom-52 left-36 text-3xl"

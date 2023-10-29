@@ -34,14 +34,14 @@ import {
 } from "@/components/ui/tooltip";
 
 export default function Home() {
-  const [currentschedule, setCurrentSchedule] = useState(0);
+  const [currentschedule, setCurrentSchedule] = useState(0); //定義變數
   const handleButtonClick = () => {
     setCurrentSchedule(70); //把進度條變70%
     window.location.href = "/bad_sea"; //導向到遊戲頁面
   };
   return (
     <div className="relative p-8 h-screen max-w-xls">
-      <div> 
+      <div>
         <ModeToggle className="absolute top-0 left-0" />
         <a className="ml-4 text-xl font-custom">
           假訊息製作所 ｜ [F]ake [N]ews [S]imulator
@@ -51,6 +51,7 @@ export default function Home() {
       <div className="border-t border-gray-300 my-3"></div>
 
       <div className="mt-5">
+        {/* 第一層選單列 */}
         <Tabs defaultValue="home" className="w-[400px]">
           <TabsList>
             <TabsTrigger value="home">主頁</TabsTrigger>
@@ -58,7 +59,7 @@ export default function Home() {
             <TabsTrigger value="fnmarker">假訊息工坊</TabsTrigger>
             <TabsTrigger value="share">假訊息推廣</TabsTrigger>
           </TabsList>
-
+          {/* 主頁內容 */}
           <TabsContent value="home">
             <Accordion type="single" collapsible>
               <AccordionItem value="item-1">
@@ -111,6 +112,7 @@ export default function Home() {
               </AccordionItem>
             </Accordion>
           </TabsContent>
+          {/* 假訊息瀏覽器 */}
           <TabsContent value="browser">
             <p>點擊任何圖片素材、文字素材即可開始製作假訊息</p>
             <div className="border-t border-gray-300 my-3"></div>
@@ -127,14 +129,16 @@ export default function Home() {
                   <DialogHeader>
                     <DialogTitle>點擊按鈕開始下載</DialogTitle>
                     <DialogDescription>下載後自動跳轉至頁面</DialogDescription>
+                    {/* 跳轉頁面按鈕 */}
                     <Button onClick={handleButtonClick}>開始</Button>
+                    {/* 進度條（裝飾用，無實際效果）*/}
                     <Progress value={currentschedule} />
                   </DialogHeader>
                 </DialogContent>
               </Dialog>
             </div>
           </TabsContent>
-
+          {/* 假訊息製作器選單列 */}
           <TabsContent value="fnmarker">
             <Tabs defaultValue="account" className="w-[400px]">
               <TabsList>
@@ -185,7 +189,7 @@ export default function Home() {
               </TabsContent>
             </Tabs>
           </TabsContent>
-
+          {/* 假訊息推播 */}
           <TabsContent value="share">
             <Tabs defaultValue="account" className="w-[400px]">
               <TabsList>

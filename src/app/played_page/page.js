@@ -1,5 +1,4 @@
 "use client";
-// 導入資料、函式庫
 import { ModeToggle } from "@/components/modetoggle";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -34,10 +33,10 @@ import {
 } from "@/components/ui/tooltip";
 
 export default function Home() {
-  const [currentschedule, setCurrentSchedule] = useState(0);
+  const [currentschedule, setCurrentSchedule] = useState(0); //定義變數
   const handleButtonClick = () => {
-    setCurrentSchedule(70); //進度條到70%
-    window.location.href = "/bad_sea"; //導向到遊戲頁面
+    setCurrentSchedule(70);
+    window.location.href = "/bad_sea";
   };
   return (
     <div className="relative p-8 h-screen max-w-xls">
@@ -235,6 +234,11 @@ export default function Home() {
           </TabsContent>
         </Tabs>
       </div>
+      {/* 
+      本頁面只有這裡有改變
+      分開頁面的目的是為了不要讓還沒玩的玩家退出由戲
+      */}
+
       <Button className="absolute bottom-0 right-0 w-auto h-32" asChild>
         <Link href="/end">我不玩了</Link>
       </Button>
