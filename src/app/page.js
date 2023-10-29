@@ -73,7 +73,7 @@ export default function Home() {
             </Accordion>
             <Accordion type="single" collapsible>
               <AccordionItem value="item-1">
-                <AccordionTrigger>我要怎們開始？</AccordionTrigger>
+                <AccordionTrigger>我要怎麼開始？</AccordionTrigger>
                 <AccordionContent>
                   到FN browser下載一個素材看看吧！
                 </AccordionContent>
