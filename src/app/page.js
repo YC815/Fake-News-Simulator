@@ -1,4 +1,5 @@
 "use client";
+// 載入資料、函式庫
 import { ModeToggle } from "@/components/modetoggle";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -35,12 +36,12 @@ import {
 export default function Home() {
   const [currentschedule, setCurrentSchedule] = useState(0);
   const handleButtonClick = () => {
-    setCurrentSchedule(70);
-    window.location.href = "/bad_sea";
+    setCurrentSchedule(70); //把進度條變70%
+    window.location.href = "/bad_sea"; //導向到遊戲頁面
   };
   return (
     <div className="relative p-8 h-screen max-w-xls">
-      <div>
+      <div> 
         <ModeToggle className="absolute top-0 left-0" />
         <a className="ml-4 text-xl font-custom">
           假訊息製作所 ｜ [F]ake [N]ews [S]imulator
