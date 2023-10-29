@@ -25,6 +25,12 @@ import {
 } from "@/components/ui/accordion";
 import { Progress } from "@/components/ui/progress";
 import { useEffect, useState } from "react";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 export default function Home() {
   const [currentschedule, setCurrentSchedule] = useState(0);
@@ -62,6 +68,14 @@ export default function Home() {
                       點擊
                     </Link>
                   </Button>
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
+            <Accordion type="single" collapsible>
+              <AccordionItem value="item-1">
+                <AccordionTrigger>我要怎們開始？</AccordionTrigger>
+                <AccordionContent>
+                  到FN browser下載一個素材看看吧！
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
@@ -117,13 +131,45 @@ export default function Home() {
                 <TabsTrigger value="actor">演員</TabsTrigger>
               </TabsList>
 
-              <TabsContent value="chatgpt">假CT</TabsContent>
+              <TabsContent value="chatgpt">
+                <TooltipProvider>
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <Button variant="outline">開發中</Button>
+                    </TooltipTrigger>
+                  </Tooltip>
+                </TooltipProvider>
+              </TabsContent>
 
-              <TabsContent value="photoshop">假pt</TabsContent>
+              <TabsContent value="photoshop">
+                <TooltipProvider>
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <Button variant="outline">開發中</Button>
+                    </TooltipTrigger>
+                  </Tooltip>
+                </TooltipProvider>
+              </TabsContent>
 
-              <TabsContent value="subtitle">上字幕器</TabsContent>
+              <TabsContent value="subtitle">
+                <TooltipProvider>
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <Button variant="outline">開發中</Button>
+                    </TooltipTrigger>
+                  </Tooltip>
+                </TooltipProvider>
+              </TabsContent>
 
-              <TabsContent value="actor">請演員念稿</TabsContent>
+              <TabsContent value="actor">
+                <TooltipProvider>
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <Button variant="outline">開發中</Button>
+                    </TooltipTrigger>
+                  </Tooltip>
+                </TooltipProvider>
+              </TabsContent>
             </Tabs>
           </TabsContent>
 
@@ -135,11 +181,35 @@ export default function Home() {
                 <TabsTrigger value="fb">FB</TabsTrigger>
               </TabsList>
 
-              <TabsContent value="tiktok">假Tiktok</TabsContent>
+              <TabsContent value="tiktok">
+                <TooltipProvider>
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <Button variant="outline">開發中</Button>
+                    </TooltipTrigger>
+                  </Tooltip>
+                </TooltipProvider>
+              </TabsContent>
 
-              <TabsContent value="line">假Line群</TabsContent>
+              <TabsContent value="line">
+                <TooltipProvider>
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <Button variant="outline">開發中</Button>
+                    </TooltipTrigger>
+                  </Tooltip>
+                </TooltipProvider>
+              </TabsContent>
 
-              <TabsContent value="fb">假fb</TabsContent>
+              <TabsContent value="fb">
+                <TooltipProvider>
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <Button variant="outline">開發中</Button>
+                    </TooltipTrigger>
+                  </Tooltip>
+                </TooltipProvider>
+              </TabsContent>
             </Tabs>
           </TabsContent>
         </Tabs>

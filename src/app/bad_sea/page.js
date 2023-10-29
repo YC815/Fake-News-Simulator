@@ -33,7 +33,12 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { useRouter } from "next/navigation";
-// import {} from "";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 export default function Home() {
   const router = useRouter();
 
@@ -192,11 +197,35 @@ export default function Home() {
                 </div>
               </TabsContent>
 
-              <TabsContent value="photoshop">假pt</TabsContent>
+              <TabsContent value="photoshop">
+                <TooltipProvider>
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <Button variant="outline">開發中</Button>
+                    </TooltipTrigger>
+                  </Tooltip>
+                </TooltipProvider>
+              </TabsContent>
 
-              <TabsContent value="subtitle">上字幕器</TabsContent>
+              <TabsContent value="subtitle">
+                <TooltipProvider>
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <Button variant="outline">開發中</Button>
+                    </TooltipTrigger>
+                  </Tooltip>
+                </TooltipProvider>
+              </TabsContent>
 
-              <TabsContent value="actor">請演員念稿</TabsContent>
+              <TabsContent value="actor">
+                <TooltipProvider>
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <Button variant="outline">開發中</Button>
+                    </TooltipTrigger>
+                  </Tooltip>
+                </TooltipProvider>
+              </TabsContent>
             </Tabs>
           </TabsContent>
 
@@ -208,9 +237,25 @@ export default function Home() {
                 <TabsTrigger value="fb">FB</TabsTrigger>
               </TabsList>
 
-              <TabsContent value="tiktok">假Tiktok</TabsContent>
+              <TabsContent value="tiktok">
+                <TooltipProvider>
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <Button variant="outline">開發中</Button>
+                    </TooltipTrigger>
+                  </Tooltip>
+                </TooltipProvider>
+              </TabsContent>
 
-              <TabsContent value="line">假Line群</TabsContent>
+              <TabsContent value="line">
+                <TooltipProvider>
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <Button variant="outline">開發中</Button>
+                    </TooltipTrigger>
+                  </Tooltip>
+                </TooltipProvider>
+              </TabsContent>
 
               <TabsContent value="fb">
                 <Sheet>
