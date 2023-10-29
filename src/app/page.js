@@ -97,6 +97,17 @@ export default function Home() {
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
+            <Accordion type="single" collapsible>
+              <AccordionItem value="item-1">
+                <AccordionTrigger>我太無聊怎麼辦？</AccordionTrigger>
+                <AccordionContent>
+                  <audio autoPlay src="/rickroll.mp3">
+                    Your browser does not support the
+                    <code>audio</code> element.
+                  </audio>
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
           </TabsContent>
           <TabsContent value="browser">
             <p>點擊任何圖片素材、文字素材即可開始製作假訊息</p>

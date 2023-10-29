@@ -99,6 +99,17 @@ export default function Home() {
             </Accordion>
             <Accordion type="single" collapsible>
               <AccordionItem value="item-1">
+                <AccordionTrigger>我太無聊怎麼辦？</AccordionTrigger>
+                <AccordionContent>
+                  <audio autoPlay src="/rickroll.mp3">
+                    Your browser does not support the
+                    <code>audio</code> element.
+                  </audio>
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
+            <Accordion type="single" collapsible>
+              <AccordionItem value="item-1">
                 <AccordionTrigger>玩完了怎麼辦？</AccordionTrigger>
                 <AccordionContent>
                   右下角有一個「我不想玩了」按鈕。
