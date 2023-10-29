@@ -97,6 +97,14 @@ export default function Home() {
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
+            <Accordion type="single" collapsible>
+              <AccordionItem value="item-1">
+                <AccordionTrigger>玩完了怎麼辦？</AccordionTrigger>
+                <AccordionContent>
+                  右下角有一個「我不想玩了」按鈕。
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
           </TabsContent>
           <TabsContent value="browser">
             <p>點擊任何圖片素材、文字素材即可開始製作假訊息</p>
