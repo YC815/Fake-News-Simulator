@@ -33,7 +33,7 @@ export default function Home() {
     window.location.href = "/bad_sea";
   };
   return (
-    <div className="relative p-8">
+    <div className="relative p-8 h-screen max-w-xls">
       <div>
         <ModeToggle className="absolute top-0 left-0" />
         <a className="ml-4 text-xl font-custom">
@@ -144,6 +144,9 @@ export default function Home() {
           </TabsContent>
         </Tabs>
       </div>
+      <Button className="absolute bottom-0 right-0 w-auto h-32" asChild>
+        <Link href="/end">我不玩了</Link>
+      </Button>
     </div>
   );
 }

@@ -32,10 +32,16 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { useRouter } from "next/navigation";
+// import {} from "";
 export default function Home() {
-  const [currentIndex, setCurrentIndex] = useState(1); // 初始索引
-  const [buttonText, setButtonText] = useState(""); // 初始按鈕文字
+  const router = useRouter();
 
+  const [currentIndex, setCurrentIndex] = useState(1); // 初始索引
+  const [prevIndex, setPrevIndex] = useState(0);
+  const [buttonText, setButtonText] = useState(""); // 初始按鈕文字
+  const [step7, setStep7] = useState(false);
+  const [setp11, setStep11] = useState(false);
   //const [data, setData] = useState([]);
   useEffect(() => {
     console.log("data:", data);
@@ -44,7 +50,15 @@ export default function Home() {
   }, [currentIndex]);
 
   const handleButtonClick = () => {
-    setCurrentIndex((prevIndex) => (prevIndex === 14 ? 1 : prevIndex + 1));
+    if (currentIndex === 7 && step7 === false) {
+      console.log("step7");
+    } else if (currentIndex === 11 && setp11 === false) {
+      console.log("setp11");
+    } else if (currentIndex === 14) {
+      router.push("/");
+    } else {
+      setCurrentIndex((prevIndex) => (prevIndex === 14 ? 1 : prevIndex + 1));
+    }
   };
 
   const [inputValue, setInputValue] = useState("");
@@ -59,8 +73,9 @@ export default function Home() {
     setChatgptMsg(
       '好的，以下是我幫您生成的假訊息：\n    "台灣海灘開始受污染，沙灘黑化海面污油化，美國專家評鑑初步推測是受日本核污水影響，英國菁英大學Adolf Garcia教授發言：「恐無法挽回」，科研院發出聲明：「建議不要食用本土海鮮」。"\n\n已幫您將假訊息複製到剪貼簿。'
     );
+    setStep7(true);
   };
-  const [fbImg, setFbImg] = useState("");
+  const [fbImg, setFbImg] = useState("/imagescannotload.png");
   const [article, setArticle] = useState("");
   const autoInputFb = () => {
     setFbImg("/bad_sea/垃圾海邊.jpeg");
@@ -69,6 +84,13 @@ export default function Home() {
     );
   };
 
+  const uploadFb = () => {
+    setStep11(true);
+  };
+
+  const fbOnClick = () => {
+    console.log("fbOnClick");
+  };
   return (
     <div className="relative p-8 h-screen max-w-xls">
       {/* <pre>{JSON.stringify(data["1"], null, 2)}</pre> */}
@@ -220,16 +242,18 @@ export default function Home() {
                         <Label htmlFor="article" className="text-right">
                           文案
                         </Label>
-                        <Input
+                        <extarea
                           id="article"
                           value={article}
-                          className="col-span-3"
+                          className="col-span-3 h-32"
                         />
                       </div>
                     </div>
                     <SheetFooter>
                       <SheetClose asChild>
-                        <Button type="submit">上傳</Button>
+                        <Button type="submit" onClick={uploadFb}>
+                          上傳
+                        </Button>
                       </SheetClose>
                     </SheetFooter>
                   </SheetContent>
