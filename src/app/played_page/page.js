@@ -101,6 +101,7 @@ export default function Home() {
               <AccordionItem value="item-1">
                 <AccordionTrigger>我太無聊怎麼辦？</AccordionTrigger>
                 <AccordionContent>
+                  可能需要3~5秒載入
                   <audio autoPlay src="/rickroll.mp3">
                     Your browser does not support the
                     <code>audio</code> element.
